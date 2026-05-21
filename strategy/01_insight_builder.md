@@ -15,13 +15,13 @@ She buys cookies for four main jobs:
 3. a Friday night or weekend dessert that feels worth the pickup
 4. a small gift for a teacher, neighbor, friend, realtor client, or someone who already has enough stuff
 
-She is not looking for the cheapest cookie. She is looking for a cookie box that makes the moment feel handled.
+She is not looking for the cheapest cookie because she is looking for a cookie box that makes the moment feel handled.
 
 ## market truth
 
 Orange County has the right buyer for a premium local cookie box, but the category is noisy. Irvine's median household income sits around $136.7K, and the local buyer has both the means and the occasions to spend on premium dessert. The broader cookie market is growing through premiumization, indulgent formats, flavor innovation, and clean-label demand.
 
-The local cookie set is crowded but not settled. Paderia has strong local taste reputation. Chip and Crumbl own convenience and impulse. Dolce by Tina proves that Irvine buyers will order small-batch cookie boxes from a local maker. Levain, Fat & Weird, and Last Crumb set the shipped-premium benchmark.
+The local cookie set is crowded but not settled. Paderia has strong local taste reputation, Chip and Crumbl own convenience and impulse, Dolce by Tina proves that Irvine buyers will order home-kitchen cookie boxes from a local maker, and Levain, Fat & Weird, and Last Crumb set the shipped-premium benchmark.
 
 What is missing is a clear OC-local thick cookie brand that combines all of these things at once:
 
@@ -53,7 +53,7 @@ That tension is the heart of the purchase: she is buying dessert, but she is als
 
 ## core insight
 
-For the OC buyer, a premium cookie box is not just a treat. It is a low-effort way to show taste.
+For the OC buyer, a premium cookie box is not just a treat because it is a low-effort way to show taste.
 
 She wants the emotional warmth of homemade, the polish of a real gift, and the texture payoff of a serious bakery cookie. Greta's Bakies can win by making the whole experience feel considered: thick cookies with crisp edges and dense fudgy centers, real ingredients she can understand, Irvine-baked freshness, and a box she can hand over as-is.
 
@@ -134,7 +134,7 @@ Proof to build:
 | awareness confusion | who actually makes great cookies near me? | "Irvine-baked thick cookies for OC cookie people." |
 | local credibility | is this a real local option or just an Instagram account? | "Baked in Irvine, picked up fresh in Irvine." |
 | chain fatigue | is this more interesting than Crumbl or Chip? | "More personal than a chain box, with a homemade heart and gift-box finish." |
-| texture doubt | will it have the center I want? | "Crisp edges. Dense fudgy centers. Real chocolate pools." |
+| texture doubt | will it have the center I want? | "Crisp edges with dense fudgy centers and real chocolate pools." |
 | price doubt | is it worth $22 to $24 for a 4-pack? | "Four 4oz cookies, boxed fresh, with visible heft." |
 | sweetness fatigue | will it be too sweet? | "Decadent, not one-note sweet." |
 | ingredient concern | what am I actually eating? | "Real butter, real chocolate, real mix-ins, and minimal artificial color." |
@@ -159,13 +159,13 @@ Emotional state: "This feels like the kind of local find people like knowing abo
 
 ### 3. texture conviction
 
-The split-open photos and language do the work: crisp edges, dense fudgy center, melty chocolate, not cakey, not thin. The cookie looks substantial enough to justify the price.
+The split-open photos and language do the work: crisp edges, dense fudgy center, melty chocolate, and a cookie that is not cakey or thin. The cookie looks substantial enough to justify the price.
 
 Emotional state: "Okay, these look worth it."
 
 ### 4. trust and relief
 
-The brand answers the practical questions: pickup window, box size, price, flavor card, allergens, reheating, optional note. She does not have to guess how the order works or whether it will look presentable.
+The brand answers the practical questions: pickup window, box size, price, flavor card, allergens, reheating, and optional note. She does not have to guess how the order works or whether it will look presentable.
 
 Emotional state: "This will be easy."
 
