@@ -1,849 +1,548 @@
-# Greta's Bakies product page wireframe
+I'll create the complete wireframe document and save it to the specified path.
+# Greta's Bakies — Product Page Wireframe
 
-This wireframe defines the reusable product page system for all 10 Greta's Bakies cookie flavors. Each flavor gets its own page, with the same section order and same common copy. Only the hero section changes by flavor.
+Single product page template, repeated across all 10 flavors. Common sections share identical copy. Hero section is tailored per flavor.
 
-The structure is mobile first. Desktop can expand sections into columns, but the order below should stay intact on small screens.
+---
 
-## page model
+## 1. PAGE MODEL (mobile first, top to bottom)
 
-Each product page uses this top-to-bottom order:
+1. Header / nav
+2. Pickup info bar (sticky under header)
+3. Tailored flavor hero (image + name + sample line)
+4. Conversion panel (CTA, qty, pickup window, add-ons)
+5. Tailored flavor description + ingredients
+6. "How to enjoy" (warming, splitting, pairing)
+7. Why Greta's (home kitchen, thickness, ingredients)
+8. Gifting (the pouch, host gift)
+9. Cross-sell strip (other flavors)
+10. FAQ accordion
+11. Footer
+12. Sticky mobile CTA bar (persistent from section 3 onward)
 
-1. common: header and navigation
-2. common: pickup info bar
-3. tailored: flavor hero
-4. common: conversion panel
-5. common: why Greta's
-6. common: how to enjoy
-7. common: gifting section
-8. common: FAQ accordion
-9. common: footer
+---
 
-## global page behavior
+## 2. COMMON SECTIONS (same copy on every product page)
 
-### mobile first rules
+### a. Header / nav
 
-- Put the hero image first, then the flavor name, then the hero line, then the short description.
-- Keep the primary CTA visible after the hero copy. On mobile, use a sticky bottom bar with flavor name, price if available, quantity, and "add to pickup order."
-- Use accordions for ingredients, allergens, pickup details, and storage so the page feels clean without hiding purchase-critical information.
-- Keep paragraphs short. Most body copy should be one to two sentences.
-- Avoid side-by-side modules on mobile. Stack in this order: image, copy, CTA, proof, details.
-- Use large tap targets for quantity, flavor add-ons, and pickup date selection.
-- Show pickup location language before checkout language. The customer should know this is Irvine pickup before she taps order.
-- Do not make customers re-read the same policy in three places. State pickup clearly in the info bar, repeat it in the conversion panel, then answer details in FAQ.
+```
+[ greta's bakies ]            [ cookies ] [ pickup ] [ faq ] [ cart (0) ]
+```
 
-### desktop adaptation
+- Logo wordmark, lowercase, left aligned
+- Right: cookies (links to flavor index), pickup (info), faq, cart icon with count
+- Mobile: hamburger menu, logo centered, cart icon right
 
-- Hero can become a two-column layout: photography on the left, purchase panel on the right.
-- The conversion panel can sit beside the hero copy as a sticky purchase card.
-- Common sections can use two-column editorial blocks, but the copy stays the same.
-- FAQ remains accordion-style for scannability.
+### b. Pickup info bar (sticky under header)
 
-## common section 1: header and navigation
+```
+pickup in irvine. order by thursday 6pm, grab on your way home friday or saturday.
+```
 
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** orient, establish brand, help customers move between menu, pickup, and gifting.
+- Slim bar, deep berry background, cream text
+- Tappable, expands to show this week's pickup window and address area (zip-level, exact address shared after order)
 
-### layout
+### c. Conversion panel
 
-- Top left: Greta's Bakies logo
-- Top right mobile: menu icon and cart icon
-- Desktop nav: cookies, pickup, gifting, about, cart
-- Small byline under logo or in nav area: "thick cookies from Irvine"
+Layout (mobile): stacked under hero. Layout (desktop): right column next to hero image.
 
-### copy
+```
+[ flavor name ]
+$ [ price per cookie ] each · 4 oz cookies
 
-**logo byline:**  
-thick cookies from Irvine
+quantity
+[ - ]  [ 6 ]  [ + ]
+six is the sweet spot. they freeze well.
 
-**nav labels:**
+pickup window
+( ) friday 4pm – 7pm
+( ) saturday 10am – 1pm
 
-- cookies
-- pickup
-- gifting
-- about
-- cart
+add a pouch?
+[ ] matte deep berry pouch, fits six cookies (+$4)
+    good for handing off without explaining.
 
-**optional cart empty state:**  
-Your pouch is empty. Fixable.
+[ add to box ]
 
-**optional cart active state:**  
-Cookies for pickup.
+free pickup in irvine. address shared after checkout.
+```
 
-### visual notes
+CTA button: deep berry fill, cream text, full width on mobile.
 
-- Header should feel quiet, not bakery-cute.
-- Use the matte deep berry color as an anchor, with plenty of warm neutral space.
-- Keep nav labels lowercase or sentence case.
+### d. Why Greta's
 
-## common section 2: pickup info bar
+```
+why greta's
 
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** make local-only ordering clear before the customer builds a cart.
+baked in an irvine home kitchen on a very serious oven schedule. 
+these are thick cookies, four ounces each, roughly two inches tall, 
+with a dense fudgy middle and edges that hold a crisp. 
 
-### layout
+real butter, real chocolate, real vanilla. no artificial colors 
+anywhere except the red velvet, which earns it. no shortening, 
+no powdered flavor packets, nothing trying to extend shelf life 
+past the weekend.
 
-- Thin bar below nav
-- One line on mobile, expandable if needed
-- Link to pickup details or FAQ
+made under california's cottage food act, class a permit. 
+direct to you, pickup only, irvine.
+```
 
-### copy
+Image: overhead shot of cooling rack, six cookies, parchment, butter wrapper visible at edge.
 
-**primary bar:**  
-Baked in an Irvine home kitchen. Local pickup only right now.
+### e. How to enjoy
 
-**expanded line if tapped:**  
-Choose your pickup window at checkout. The exact Irvine pickup details are shared after your order is confirmed.
+```
+how to enjoy
 
-### visual notes
+warm it for eight seconds. if you warm it for eight seconds, 
+you will understand. the middle softens back into what it was 
+when it came out of the oven.
 
-- Do not use urgency language.
-- Keep it helpful and plain.
-- If a future local delivery option exists, this bar can become: "Irvine pickup today. Local delivery opens when the oven schedule allows." Until then, do not promise delivery.
+split it open. the inside is the point. you want to see the 
+chocolate stretch, the fruit settle, the caramel pull.
 
-## tailored section: flavor hero
+pair it. black coffee makes the sweet ones taste less sweet. 
+oat milk makes everything taste like more. a cold glass of 
+whole milk is still undefeated.
 
-**label:** TAILORED  
-**appears on:** every product page, with flavor-specific copy  
-**purpose:** sell the specific cookie through texture, ingredients, personality, pairing, and photography.
+eat it slowly. worth eating slowly over the sink.
+```
 
-### layout
+Three small icons or photo tiles: microwave (8s), split cookie, coffee cup.
 
-Mobile order:
+### f. Gifting
 
-1. Product photo carousel
-2. Flavor name
-3. Hero sample line
-4. Short description
-5. Key ingredients
-6. What makes this one different
-7. Pairs well with
-8. Primary CTA
-9. Secondary add-ons
-10. Pickup note
+```
+the pouch
 
-Desktop order:
+matte deep berry, fits six cookies, closes flat. 
+a better answer than "i brought wine."
 
-- Left: photo carousel
-- Right: flavor name, hero line, description, ingredients, differentiator, pairing, CTA, add-ons, pickup note
+bring these when you said you'd handle dessert. 
+your friend in newport is going to ask where these came from.
 
-### shared CTA copy for all hero sections
+add a pouch at checkout for four dollars.
+```
 
-**primary CTA:**  
-Add to pickup order
+Image: pouch on a kitchen counter, six cookies half-visible, set of keys and a wine bottle out of focus behind it.
 
-**secondary CTA:**  
-Build a mixed box
+### g. FAQ accordion
 
-**pickup note under CTA:**  
-Pickup is in Irvine. Choose your window at checkout.
+```
+faq
 
-**quantity helper:**  
-One cookie is a full dessert. Two means you planned ahead.
+▸ when do i order by?
+  thursday 6pm for that weekend's pickup. earlier in the week 
+  is safer, popular flavors sell out by wednesday.
 
-### approved sample line placement
+▸ where is pickup?
+  a residential address in irvine, near the woodbridge area. 
+  exact address goes out by text the morning of your pickup window.
 
-Use one hero sample line per flavor. Approved lines from the brand bank are used exactly where possible. Matching-tone lines are used for the flavors that did not have an approved owner line.
+▸ what are the pickup windows?
+  friday 4pm to 7pm, saturday 10am to 1pm. pick one at checkout. 
+  if something comes up, text to reschedule within the same weekend.
 
-## tailored hero copy by flavor
+▸ how should i store them?
+  room temperature in the pouch for three days. freezer for up to 
+  two months, wrapped tight. eight seconds in the microwave brings 
+  them back from either.
 
-### chocolate chip
+▸ allergens?
+  every cookie contains wheat, eggs, dairy, and is baked in a 
+  kitchen that also handles peanuts, tree nuts, and soy. the 
+  peanut butter and almond flavors obviously contain those. 
+  the matcha + macadamia contains tree nuts. cross-contact is 
+  possible across all flavors.
 
-**label:** TAILORED  
-**flavor name:** Chocolate Chip  
-**approved line used:** "For people who order chocolate chip to judge the whole place."
+▸ what is the cottage food act?
+  california law lets home kitchens sell certain baked goods 
+  directly to customers with a class a permit. that's what this is. 
+  no retail, no wholesale, no shipping. just pickup in irvine.
 
-**hero line:**  
-For people who order chocolate chip to judge the whole place.
+▸ can you ship?
+  not yet. cottage food rules are pickup and direct delivery only. 
+  if you're outside oc and visiting, plan a pickup.
+
+▸ do you do custom orders or events?
+  small ones, yes. send a note through the contact form with the 
+  date and headcount.
+```
+
+### h. Footer
+
+```
+greta's bakies
+thick cookies from irvine, finally.
+
+cookies      pickup info       contact
+flavors      this week         instagram
+pouch        faq               email
+
+made in an irvine kitchen with a very serious oven schedule.
+california cottage food operation, class a permit #[xxxx].
+
+© greta's bakies
+```
+
+---
+
+## 3. TAILORED FLAVOR HERO (full copy, 10 flavors)
+
+Hero structure for each:
+- Flavor name (large, lowercase, serif display)
+- Sample line (subhead)
+- 2–3 sentence description
+- Ingredients (inline, natural)
+- What makes this one different
+- Pairs well with
+- Photography note
+
+---
+
+### 1. chocolate chip
+
+**hero line:** for people who order chocolate chip to judge the whole place.
 
 **description:**  
-A thick 4 oz cookie with a set edge, a soft middle, and chocolate pockets that stay the reason you came here. It is the familiar one, but it still has to earn the first bite.
+this is the one the whole menu has to answer to. brown butter, two kinds of chocolate, a slow cold rest before baking so the edges go deep golden and the middle stays soft. for the gooey-middle cookie people.
 
-**key ingredients:**  
-Butter, brown sugar, vanilla, eggs, flour, and real chocolate chips folded through the dough.
+**ingredients, naturally:** brown butter, dark chocolate chunks, semisweet chips, light brown sugar, vanilla, flaky salt on top.
 
-**what makes this one different:**  
-This is the benchmark cookie. No swirl, no fruit, no frosting, just the dough, the chocolate, and whether the middle does what it should.
+**what makes this one different:** the cold rest. forty-eight hours in the fridge before it ever sees the oven. that's why the flavor tastes like more than the sum of it.
 
-**pairs well with:**  
-Hot coffee, cold milk, or the drive home when you said you would wait.
+**pairs well with:** black coffee, cold whole milk, a friday that got long.
 
-**visual and photography note:**  
-Show one whole cookie with a craggy top and visible chocolate chips, plus one split cookie with melted chocolate pockets in the center. The first image should make the thickness obvious. Include a matte deep berry pouch slightly behind the cookie, not centered.
+**photo note:** split open warm, top half lifted, chocolate stretching between the two halves, flaky salt visible on the dome.
 
-### triple chocolate
+---
 
-**label:** TAILORED  
-**flavor name:** Triple Chocolate  
-**approved line used:** "The one for people who meant it when they said dessert."
+### 2. triple chocolate
 
-**hero line:**  
-The one for people who meant it when they said dessert.
+**hero line:** the one for people who meant it when they said dessert.
 
 **description:**  
-Dark cocoa dough, chocolate chips, and a middle that goes soft when you warm it for eight seconds. It eats rich without needing a speech about it.
+dark cocoa dough, dark chocolate chunks, and a milk chocolate pool in the middle that stays soft at room temperature. thick enough to make you pause before sharing. if you warm it for eight seconds, you will understand.
 
-**key ingredients:**  
-Cocoa, butter, brown sugar, eggs, flour, chocolate chips, and extra chocolate folded into the dough.
+**ingredients, naturally:** dutch cocoa, dark chocolate chunks, milk chocolate, brown butter, vanilla, sea salt.
 
-**what makes this one different:**  
-It is the deepest cookie on the menu. The texture reads fudgy first, with chocolate in the crumb and chocolate in the bite.
+**what makes this one different:** three chocolates doing three jobs. the cocoa carries the dough, the dark chunks hold their shape, the milk chocolate melts into something you can pull apart.
 
-**pairs well with:**  
-Black coffee, espresso, or a quiet Friday night where dinner was snacks.
+**pairs well with:** espresso, vanilla ice cream, an evening with no further plans.
 
-**visual and photography note:**  
-Use dramatic contrast. Photograph the split center close enough to show the dense cocoa crumb and melted chocolate. Add a small pile of chocolate pieces in the frame for ingredient proof, but keep the cookie in charge.
+**photo note:** dramatic split, deep brown crumb, glossy milk chocolate pulling in a long string, dark chunks visible in cross section.
 
-### matcha + macadamia
+---
 
-**label:** TAILORED  
-**flavor name:** Matcha + Macadamia  
-**approved line used:** "For the matcha person in every group chat."
+### 3. matcha + macadamia
 
-**hero line:**  
-For the matcha person in every group chat.
+**hero line:** for the matcha person in every group chat.
 
 **description:**  
-Soft green matcha crumb with buttery macadamia pieces tucked through the middle. The green is matcha, the crunch is macadamia, and the cookie still knows it is dessert.
+ceremonial grade matcha in the dough, white chocolate, toasted macadamias. tastes green in a good way, slightly grassy, slightly sweet, with the macadamia going buttery against it. the kind you split, then regret splitting.
 
-**key ingredients:**  
-Matcha, macadamia nuts, butter, brown sugar, eggs, flour, and vanilla.
+**ingredients, naturally:** ceremonial grade matcha, white chocolate, toasted macadamia nuts, brown butter, vanilla.
 
-**what makes this one different:**  
-This is the earthy one. It has a quieter sweetness and a nutty finish, so it feels more grown-up without getting precious.
+**what makes this one different:** real matcha, not flavoring. the color comes from the powder, not anything added. it tastes like matcha because it is matcha.
 
-**pairs well with:**  
-Iced matcha, hot green tea, or coffee if you like the bitter with the buttery.
+**pairs well with:** hojicha, oat milk latte, an afternoon that needs a small ceremony.
 
-**visual and photography note:**  
-The green must look natural and appetizing, not neon. Capture a split cookie so the matcha color carries into the center. Show macadamia pieces on top and inside. Include a small dish of matcha powder only if it looks clean and real.
+**photo note:** split open to show green crumb, white chocolate puddles, whole macadamia pieces, soft natural light to keep the green honest.
 
-### red velvet
+---
 
-**label:** TAILORED  
-**flavor name:** Red Velvet  
-**approved line used:** "The one that looks dramatic and eats soft."
+### 4. red velvet
 
-**hero line:**  
-The one that looks dramatic and eats soft.
+**hero line:** the one that looks dramatic and eats soft.
 
 **description:**  
-Soft cocoa crumb, a red velvet bite, and cream cheese where it belongs. This is the only cookie on the menu with food coloring, because red velvet has a job to do.
+deep red, cocoa-forward, cream cheese chips folded through. the only cookie on the menu with color added, and it earns it. this is so good, you can tell nobody tried to make it behave.
 
-**key ingredients:**  
-Cocoa, butter, brown sugar, eggs, flour, vanilla, red food coloring, and cream cheese.
+**ingredients, naturally:** cocoa, cream cheese chips, buttermilk, vanilla, a small amount of gel food color, brown butter.
 
-**what makes this one different:**  
-It brings the most visual drama, but the bite stays soft and familiar. The cream cheese gives it a little tang against the cocoa dough.
+**what makes this one different:** cream cheese chips instead of frosting on top. they melt into pockets through the middle so every bite has the tang built in.
 
-**pairs well with:**  
-Hot coffee, black tea, or a birthday where cake feels like too much.
+**pairs well with:** black coffee, a glass of cold milk, an excuse to wear lipstick.
 
-**visual and photography note:**  
-Photograph the red crumb clearly, with cream cheese visible on top or in the center depending on final recipe format. Avoid over-saturation. The red should feel like red velvet, not candy. Use a neutral plate so the color does the work.
+**photo note:** dramatic split, deep crimson crumb against pale cream cheese pockets, shot on something neutral so the color does the work.
 
-### biscoff
+---
 
-**label:** TAILORED  
-**flavor name:** Biscoff  
-**approved line used:** "Sweet and spiced, and very hard to split evenly."
+### 5. biscoff
 
-**hero line:**  
-Sweet and spiced, and very hard to split evenly.
+**hero line:** sweet and spiced, and very hard to split evenly.
 
 **description:**  
-Cookie butter warmth in a thick cookie with a soft center and a little spiced edge. It is the one that smells like you made a good decision before you even take the first bite.
+biscoff cookie butter swirled into a brown sugar dough, biscoff cookie pieces baked into the top, white chocolate to round it out. cinnamon-warm, caramelized, the kind of cookie that smells like the oven was busy.
 
-**key ingredients:**  
-Biscoff cookie butter, Biscoff cookie pieces, butter, brown sugar, eggs, flour, and vanilla.
+**ingredients, naturally:** biscoff cookie butter, crushed biscoff cookies, white chocolate, brown butter, brown sugar, cinnamon.
 
-**what makes this one different:**  
-It is the most nostalgic flavor on the menu. The spice is gentle, the sweetness is round, and the cookie butter makes the middle feel especially soft.
+**what makes this one different:** the cookie butter goes in as a swirl, not mixed flat through the dough. you get veins of it in cross section, soft against the crumb.
 
-**pairs well with:**  
-Coffee with cream, chai, or an after-dinner plate that everyone keeps reaching toward.
+**pairs well with:** flat white, vanilla ice cream, a slow sunday.
 
-**visual and photography note:**  
-Show a visible cookie butter center or ribbon if the recipe includes one. Use crushed Biscoff crumbs around the cookie for immediate flavor recognition. A split shot should show the warm tan interior and any cookie butter softness.
+**photo note:** split open to show the caramel-colored swirl through the dough, biscoff pieces on the dome, warm tungsten-leaning light.
 
-### caramel + pretzel
+---
 
-**label:** TAILORED  
-**flavor name:** Caramel + Pretzel  
-**approved line used:** "The salty-sweet one people pretend they bought for the table."
+### 6. caramel + pretzel
 
-**hero line:**  
-The salty-sweet one people pretend they bought for the table.
+**hero line:** the salty-sweet one people pretend they bought for the table.
 
 **description:**  
-A soft middle with caramel pull and pretzel snap, built for the person who wants salt with the sweet part. The edge holds, the center gives, and the pretzel keeps it from getting too polite.
+soft caramel center, crushed pretzels through the dough, flaky salt on top. the caramel stays gooey at room temperature and stretches when you pull it apart. buy six and pretend the plan was sharing.
 
-**key ingredients:**  
-Caramel, pretzel pieces, butter, brown sugar, eggs, flour, vanilla, and a little salt.
+**ingredients, naturally:** soft caramel, crushed pretzels, brown butter, brown sugar, flaky sea salt, vanilla.
 
-**what makes this one different:**  
-This cookie has the most contrast. Soft and crunchy, sweet and salty, with caramel doing the dramatic part.
+**what makes this one different:** the caramel is made in house and goes in as a disc in the center of each cookie, so every one has a guaranteed pull when you split it.
 
-**pairs well with:**  
-Cold brew, black tea, or a snack dinner that turned into dessert.
+**pairs well with:** cold brew, bourbon if you're being honest, a movie night.
 
-**visual and photography note:**  
-The caramel pull is the hero. Capture one split shot with caramel stretching between halves. Keep pretzel pieces visible on top so the salt cue is immediate. Add a few broken pretzels in frame, but avoid clutter.
+**photo note:** split open, caramel pulling in a long visible string between the halves, pretzel pieces visible in the crumb, flaky salt on top catching light.
 
-### peanut butter
+---
 
-**label:** TAILORED  
-**flavor name:** Peanut Butter  
-**matching-tone line used:** "For peanut butter people who want the whole cookie to commit."
+### 7. peanut butter
 
-**hero line:**  
-For peanut butter people who want the whole cookie to commit.
+**hero line:** for the friend who says she is fine.
 
 **description:**  
-Dense, soft, and unmistakably peanut butter from the first bite. The middle stays rich, the edge sets up, and the flavor shows up early.
+real peanut butter in the dough, peanut butter chips, dark chocolate chunks, a soft fork-pressed top. dense, salty, the kind of cookie that takes a minute to finish. worth eating slowly over the sink.
 
-**key ingredients:**  
-Peanut butter, butter, brown sugar, eggs, flour, vanilla, and roasted peanuts if used in the final recipe.
+**ingredients, naturally:** natural peanut butter, peanut butter chips, dark chocolate chunks, brown butter, brown sugar, flaky salt.
 
-**what makes this one different:**  
-It is the most direct cookie on the menu. No hidden note, no gentle suggestion, just peanut butter doing real work.
+**what makes this one different:** natural peanut butter, not the sweet kind. the cookie isn't trying to taste like a candy bar. it tastes like peanut butter, then chocolate, then salt.
 
-**pairs well with:**  
-Cold milk, hot coffee, or a square of dark chocolate if you are building a plate.
+**pairs well with:** cold whole milk, black coffee, a phone call you've been putting off.
 
-**visual and photography note:**  
-Show the dense interior and any fork mark, peanut piece, or top texture that makes it read peanut butter immediately. Keep the color warm, not gray. Include a small smear of peanut butter on a spoon only if it feels natural.
+**photo note:** split open, fork crosshatch visible on the dome, peanut butter chips and dark chocolate in cross section, matte styling.
 
-### apple
+---
 
-**label:** TAILORED  
-**flavor name:** Apple  
-**approved line referenced:** "The apple cookie tastes like apple instead of candle."
+### 8. apple
 
-**hero line:**  
-The apple cookie tastes like apple instead of candle.
+**hero line:** for friday night, when dinner was snacks.
 
 **description:**  
-Soft middle, real apple pieces, and cinnamon that knows when to stop. It is cozy without turning into a scented candle, which is harder than it sounds.
+diced honeycrisp apple cooked down with brown sugar and cinnamon, folded into a brown butter dough, a streusel-style crumble on top. tastes like the front end of a pie without the production.
 
-**key ingredients:**  
-Apple pieces, cinnamon, butter, brown sugar, eggs, flour, vanilla, and a little salt.
+**ingredients, naturally:** honeycrisp apple, brown butter, cinnamon, brown sugar, oat streusel, vanilla.
 
-**what makes this one different:**  
-This is the cozy one. It has fruit, spice, and a softer bakery feeling, but it still eats like a thick cookie.
+**what makes this one different:** the apple gets cooked before it goes in, so it's soft and concentrated, not raw and watery. the streusel on top stays crisp against the soft middle.
 
-**pairs well with:**  
-Black tea, coffee, or the night you want tea and one very serious cookie.
+**pairs well with:** vanilla ice cream, hot tea, a sweater you forgot you owned.
 
-**visual and photography note:**  
-Show apple pieces in the split center so the flavor feels real. Use a warm neutral background and one fresh apple wedge nearby. Avoid fall-prop overload. The cookie should not look seasonal-only unless the business chooses that later.
+**photo note:** split open to show visible apple chunks in cross section, golden streusel crumble on top, warm natural light, fall-leaning palette without being literal.
 
-### almond
+---
 
-**label:** TAILORED  
-**flavor name:** Almond  
-**matching-tone line used:** "The almond slices make it feel a little dressed up."
+### 9. almond
 
-**hero line:**  
-The almond slices make it feel a little dressed up.
+**hero line:** thick cookies from irvine, finally.
 
 **description:**  
-A soft, thick cookie with almond in the bite and a little crunch on top. It is quiet, nutty, and very good with coffee.
+almond paste folded into the dough, sliced almonds toasted on top, a touch of almond extract used carefully. soft marzipan-leaning middle, crisp toasted edges. quiet, grown, repeat-order territory.
 
-**key ingredients:**  
-Almonds, almond extract if used, butter, brown sugar, eggs, flour, vanilla, and sliced almonds on top.
+**ingredients, naturally:** almond paste, sliced almonds, almond extract, brown butter, vanilla, light brown sugar.
 
-**what makes this one different:**  
-It is the most restrained cookie in the lineup. Less dramatic than the chocolate ones, more polished than the cozy ones, and still fully a cookie.
+**what makes this one different:** almond paste instead of just extract. it gives the middle a chewy density that tastes like the inside of a good croissant.
 
-**pairs well with:**  
-Hot coffee, cappuccino, or afternoon tea when you want the cookie to feel a little grown up.
+**pairs well with:** cortado, earl grey, a quiet morning.
 
-**visual and photography note:**  
-Top texture matters here. Photograph sliced almonds clearly on the surface, with a split shot that shows the soft inside under the crunch. Use the deep berry pouch in frame because almond benefits from a more polished setting.
+**photo note:** split open, pale gold crumb, toasted almond slices on the dome catching light, clean minimal styling, linen or stoneware backdrop.
 
-### raspberry
+---
 
-**label:** TAILORED  
-**flavor name:** Raspberry  
-**approved line used:** "A fruit cookie for people who still want a cookie."
+### 10. raspberry
 
-**hero line:**  
-A fruit cookie for people who still want a cookie.
+**hero line:** a fruit cookie for people who still want a cookie.
 
 **description:**  
-Jammy raspberry through a soft middle, with enough tartness to keep the cookie awake. The pink is raspberry, and the cookie is still thick enough to make you pause before sharing.
+fresh raspberries folded in at the last second so they stay whole, white chocolate chunks, a vanilla bean dough. the berries burst in the oven and leave magenta streaks through the crumb. for the group chat that keeps asking what to bring.
 
-**key ingredients:**  
-Raspberry, butter, brown sugar, eggs, flour, vanilla, and white chocolate if used in the final recipe.
+**ingredients, naturally:** fresh raspberries, white chocolate chunks, vanilla bean, brown butter, brown sugar.
 
-**what makes this one different:**  
-It is the brightest cookie on the menu. Fruit leads the flavor, but the texture stays dense and buttery instead of turning cakey.
+**what makes this one different:** fresh berries, not jam, not freeze-dried. they go in whole and break down in the oven, which is why every cookie looks a little different.
 
-**pairs well with:**  
-Black tea, iced coffee, or a gift box for the friend who says she is fine.
+**pairs well with:** champagne, iced tea, brunch you're hosting.
 
-**visual and photography note:**  
-The raspberry color needs to be visible in the center or swirl. Photograph a split cookie with jammy pockets or berry pieces showing. Keep the pink natural. A small dish of raspberries can sit nearby, but the cookie should carry the color on its own.
+**photo note:** split open to show magenta streaks against pale crumb, whole raspberry pieces visible, white chocolate puddles, bright daylight, light pink and cream palette.
 
-## common section 4: conversion panel
+---
 
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** make ordering feel simple, local, and gift-ready.
+## 4. PHOTOGRAPHY REQUIREMENTS PER FLAVOR
 
-### layout
+Every flavor needs three shots: hero, split-open, and in-pouch. Below is the split-open spec per flavor since it's the workhorse.
 
-Mobile:
-
-- Sticky bottom CTA after customer scrolls past hero
-- Quantity selector
-- Pickup date or window selector
-- Add-ons module
-- Trust note
-
-Desktop:
-
-- Sticky card on the right side of hero or immediately below hero copy
-
-### copy
-
-**panel heading:**  
-Ready for pickup in Irvine
-
-**body copy:**  
-Choose your flavor, pick your quantity, and select a pickup window at checkout. Greta bakes from a home kitchen in Irvine, so the oven schedule is real and the pickup plan matters.
-
-**primary CTA:**  
-Add to pickup order
-
-**secondary CTA:**  
-Build a mixed box
-
-**quantity note:**  
-One 4 oz cookie is a full dessert. Four makes it look like you planned dessert for everyone.
-
-**pickup selector helper:**  
-Pickup windows are based on the bake schedule. Choose the one that fits your day.
-
-**gift checkbox:**  
-Make it a gift
-
-**gift helper copy:**  
-Packed in the matte deep berry pouch, ready to hand over as is.
-
-**add-ons:**
-
-- Add another flavor
-- Build a six-cookie mixed box
-- Add a handwritten pickup note if operationally possible
-- Add a warming card for gifting
-
-**trust note:**  
-Made in an Irvine home kitchen under a California Cottage Food Act Class A permit.
-
-### conversion notes
-
-- Do not bury pickup requirements under the CTA.
-- If inventory is limited, say "sold out for this bake" instead of creating fake urgency.
-- If pickup windows are full, offer "join the next bake list" or "see other flavors."
-- If a flavor sells out, keep the product page live for SEO and email capture.
-
-### empty, sold out, and waitlist states
-
-**sold out state:**  
-Sold out for this bake.
-
-**sold out helper:**  
-Greta bakes around pickup windows, not a warehouse shelf. Join the next bake list and we will tell you when this one is back.
-
-**waitlist CTA:**  
-Tell me when it is back
-
-**inventory low state:**  
-A few left for this pickup window.
-
-**cart reminder:**  
-Pickup is in Irvine. Details come with your confirmation.
-
-## common section 5: why Greta's
-
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** build trust without over-explaining.
-
-### layout
-
-- Section heading
-- Three proof cards
-- Short kitchen note
-- Optional owner photo or kitchen detail photo
-
-### copy
-
-**heading:**  
-Why Greta's
-
-**intro:**  
-Greta's Bakies is one woman, one oven, and ten thick cookies from a home kitchen in Irvine. The cookies are 4 oz, the middles stay soft, and the pickup plan is local on purpose.
-
-**proof card 1 heading:**  
-Made in Irvine
-
-**proof card 1 copy:**  
-Baked from a home kitchen in Irvine under a California Cottage Food Act Class A permit. Local pickup only, so the cookies do not have to pretend they were built for a shipping truck.
-
-**proof card 2 heading:**  
-Ingredients you can read
-
-**proof card 2 copy:**  
-Butter, sugar, eggs, flour, chocolate, matcha, raspberry, apple, almonds, peanuts, pretzels, caramel. The flavor should show up as the thing it says it is.
-
-**proof card 3 heading:**  
-The middle is the point
-
-**proof card 3 copy:**  
-Each cookie is thick enough to hold a soft center. Warm it for eight seconds if you want the middle to relax a little.
-
-**kitchen note:**  
-Made in an Irvine kitchen with a very serious oven schedule.
-
-**approved sample line placement:**  
-Use "Made in an Irvine kitchen with a very serious oven schedule." as the closing kitchen note in this section.
-
-### visual notes
-
-- Use a real kitchen detail if available: trays, cooling rack, hands packing pouches.
-- Do not over-stage the home kitchen. The proof is the specific detail, not a fake lifestyle scene.
-
-## common section 6: how to enjoy
-
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** improve the eating experience and reduce post-purchase questions.
-
-### layout
-
-- Section heading
-- Three instruction cards: warm, store, pair
-- Small note for gifting
-
-### copy
-
-**heading:**  
-How to enjoy
-
-**intro:**  
-The cookie is ready as is. If you like the middle softer, give it eight seconds and pay attention.
-
-**card 1 heading:**  
-Warm it
-
-**card 1 copy:**  
-Microwave for about eight seconds. You want the center soft and the edge still holding.
-
-**card 2 heading:**  
-Store it
-
-**card 2 copy:**  
-Keep cookies sealed at room temperature and eat within the week, ideally sooner. If you freeze them, wrap them well and warm gently after thawing.
-
-**card 3 heading:**  
-Pair it
-
-**card 3 copy:**  
-Coffee works. Tea works. Standing in the kitchen before anyone else notices also works.
-
-**gift note:**  
-If you are bringing them somewhere, keep them in the pouch until you arrive. Put them on a plate and take the compliment.
-
-**approved sample line placement:**  
-Use "If you warm it for eight seconds, you will understand." as social or product-card microcopy that links into this section.
-
-### visual notes
-
-- Show a split cookie after warming, not a messy melted pile.
-- If using video, show the hand break or center pull in under five seconds.
-
-## common section 7: gifting section
-
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** turn a single product page into a host gift and group order opportunity.
-
-### layout
-
-- Large image of matte deep berry pouch
-- Gift copy
-- CTA to build mixed box
-- Short occasion list
-
-### copy
-
-**heading:**  
-Bring these when you said you would handle dessert
-
-**body:**  
-The pouch is matte deep berry, so it already looks like you thought about it. Bring one for a friend, four for the table, or a mixed box when nobody in the group chat can agree.
-
-**occasion list heading:**  
-Good for
-
-**occasion bullets:**
-
-- Friday night, when dinner was snacks
-- Newport birthdays and Costa Mesa Fridays
-- The friend who says she is fine
-- The dinner party you remembered at lunch
-- The thank-you that needs to taste like you meant it
-
-**CTA:**  
-Build a giftable box
-
-**secondary line:**  
-The pouch does the wrapping for you.
-
-**approved sample line placement:**  
-Use "Bring these when you said you would handle dessert." as the gifting section heading. Use "For Friday night, when dinner was snacks." in the occasion list.
-
-### visual notes
-
-- Hero the matte deep berry pouch in natural light.
-- Show pouch in hand for scale.
-- Include one shot of cookies plated after being removed from the pouch.
-- Keep gift styling practical: plate, napkin, coffee cup, passenger seat, or host counter.
-
-## common section 8: FAQ accordion
-
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** answer purchase blockers without making the page feel legal.
-
-### layout
-
-- Accordion list
-- Keep answers short
-- Place near bottom after desire and conversion sections
-
-### copy
-
-**heading:**  
-Questions before pickup
-
-**FAQ 1 question:**  
-How do I order?
-
-**FAQ 1 answer:**  
-Choose your cookies, add them to your pickup order, and select a pickup window at checkout. You will get the Irvine pickup details after your order is confirmed.
-
-**FAQ 2 question:**  
-Do you deliver?
-
-**FAQ 2 answer:**  
-Not right now. Greta's Bakies is direct-to-consumer with local pickup in Irvine.
-
-**FAQ 3 question:**  
-Where are the cookies made?
-
-**FAQ 3 answer:**  
-They are made in a home kitchen in Irvine under a California Cottage Food Act Class A permit.
-
-**FAQ 4 question:**  
-How big is each cookie?
-
-**FAQ 4 answer:**  
-Each cookie is 4 oz and thick enough to hold a soft middle. One cookie is a real dessert.
-
-**FAQ 5 question:**  
-How should I store them?
-
-**FAQ 5 answer:**  
-Keep them sealed at room temperature and eat within the week, ideally sooner. Warm for about eight seconds if you want the middle softer.
-
-**FAQ 6 question:**  
-Do the cookies contain allergens?
-
-**FAQ 6 answer:**  
-Yes. Cookies may contain wheat, eggs, milk, tree nuts, peanuts, and soy depending on the flavor. They are made in a home kitchen that handles common allergens. Check the flavor details before ordering.
-
-**FAQ 7 question:**  
-Are the ingredients listed?
-
-**FAQ 7 answer:**  
-Yes. Each flavor page lists the key ingredients, and final labels should include the full ingredient and allergen information required for cottage food sales.
-
-**FAQ 8 question:**  
-Is there food coloring?
-
-**FAQ 8 answer:**  
-Red Velvet uses food coloring because red velvet should be red. The green in Matcha + Macadamia is matcha, and the pink in Raspberry is raspberry.
-
-**FAQ 9 question:**  
-Can I order for a gift?
-
-**FAQ 9 answer:**  
-Yes. Choose "make it a gift" at checkout if available. The cookies come in the matte deep berry pouch, which is ready to hand over as is.
-
-**FAQ 10 question:**  
-Can I mix flavors?
-
-**FAQ 10 answer:**  
-Yes. Build a mixed box if you want a little chocolate, a little fruit, and one cookie you keep for yourself.
-
-### compliance note
-
-- Final site copy should be reviewed against current California Cottage Food Act Class A labeling and disclosure requirements before launch.
-- Do not imply inspection status beyond the permit category unless confirmed.
-
-## common section 9: footer
-
-**label:** COMMON  
-**appears on:** every product page  
-**purpose:** close with local proof, helpful links, and compliance basics.
-
-### layout
-
-- Logo and byline
-- Footer nav
-- Contact or Instagram link
-- Cottage food note
-- Pickup location note
-
-### copy
-
-**byline:**  
-Thick cookies from Irvine, finally.
-
-**footer note:**  
-Greta's Bakies is a home kitchen cookie business in Irvine, California. Local pickup only.
-
-**cottage food line:**  
-Made under a California Cottage Food Act Class A permit.
-
-**footer nav labels:**
-
-- cookies
-- pickup details
-- gifting
-- ingredients and allergens
-- Instagram
-- contact
-
-**microcopy:**  
-Your friend in Newport is going to ask where these came from.
-
-**approved sample line placement:**  
-Use "Thick cookies from Irvine, finally." as the footer byline. Use "Your friend in Newport is going to ask where these came from." as rotating footer microcopy or confirmation-page copy.
-
-## photography requirements
-
-### global photography system
-
-Every flavor page needs these assets:
-
-1. Whole cookie hero on a simple surface
-2. Split cookie showing the middle
-3. Close-up texture shot
-4. Cookie next to matte deep berry pouch
-5. In-hand scale shot or plate scale shot
-6. Optional short video of the split or warm center
-
-### global visual rules
-
-- Show thickness clearly. The 4 oz size should be obvious without needing a ruler.
-- Lead with texture. The middle matters more than the prop.
-- Keep backgrounds warm, clean, and real.
-- Use the deep berry pouch as a brand anchor, not a constant center-stage object.
-- Avoid fake bakery props, too many flowers, and anything that makes the cookies look mass-produced.
-- Shoot natural light whenever possible.
-- Keep ingredient props minimal and specific: matcha powder, raspberries, pretzels, almonds, apple, chocolate, peanuts.
-- Every flavor needs at least one image where the customer can identify the flavor without reading.
-
-### flavor-specific shot checklist
-
-| flavor | must show | avoid |
-|---|---|---|
-| Chocolate Chip | melted chocolate pockets, thick split center | making it look flat or generic |
-| Triple Chocolate | dark cocoa crumb, melted chocolate, fudgy center | over-dark images where texture disappears |
-| Matcha + Macadamia | natural green crumb, macadamia pieces | neon green color correction |
-| Red Velvet | red crumb, cream cheese, soft texture | candy-red saturation |
-| Biscoff | cookie butter center or ribbon, Biscoff crumb | too many loose crumbs covering the cookie |
-| Caramel + Pretzel | caramel pull, pretzel pieces, salt cue | caramel mess that hides the cookie structure |
-| Peanut Butter | dense center, peanut butter top texture | dry-looking crumb |
-| Apple | real apple pieces, cinnamon warmth | fall prop overload |
-| Almond | sliced almond top, soft interior | making it look like a breakfast pastry |
-| Raspberry | jammy raspberry pockets, natural pink | artificial-looking pink |
-
-## conversion elements across every flavor page
-
-### primary conversion goal
-
-Get the customer to add the flavor to a local pickup order.
-
-### secondary conversion goals
-
-- Build a mixed box
-- Add more flavors to the cart
-- Make the order gift-ready
-- Join the next bake list if sold out
-- Understand pickup before checkout
-
-### required conversion components
-
-- Primary CTA: "Add to pickup order"
-- Secondary CTA: "Build a mixed box"
-- Sticky mobile CTA after hero scroll
-- Quantity selector
-- Pickup window selector or prompt
-- Gift checkbox
-- Add another flavor carousel
-- Sold out state with waitlist CTA
-- Trust note near CTA: "Made in an Irvine home kitchen under a California Cottage Food Act Class A permit."
-- Pickup note near CTA: "Pickup is in Irvine. Choose your window at checkout."
-
-### suggested add-on module copy
-
-**heading:**  
-Make it a box
-
-**body:**  
-Add a few flavors and call dessert handled. Chocolate for the person who asks first, fruit for the one who says she only wants a bite, and one extra because someone always changes their mind.
-
-**add-on CTA:**  
-Add another flavor
-
-**gift CTA:**  
-Make it a gift
-
-## approved sample line map
-
-| approved line | recommended placement |
+| Flavor | Split-open shot must show |
 |---|---|
-| For the gooey-middle cookie people. | Sitewide product card or collection page intro |
-| This is so good, you can tell nobody tried to make it behave. | Rotating product page microcopy or cart confirmation |
-| Thick enough to make you pause before sharing. | Raspberry hero description and general texture module |
-| If you warm it for eight seconds, you will understand. | How to enjoy section and order confirmation |
-| Bring these when you said you would handle dessert. | Gifting section heading |
-| Thick cookies from Irvine, finally. | Footer byline or collection page hero |
-| Made in an Irvine kitchen with a very serious oven schedule. | Why Greta's section kitchen note |
-| Your friend in Newport is going to ask where these came from. | Footer microcopy or gifting module |
-| For Friday night, when dinner was snacks. | Gifting occasion list and Triple Chocolate pairing |
-| For people who order chocolate chip to judge the whole place. | Chocolate Chip hero line |
-| The one for people who meant it when they said dessert. | Triple Chocolate hero line |
-| For the matcha person in every group chat. | Matcha + Macadamia hero line |
-| The one that looks dramatic and eats soft. | Red Velvet hero line |
-| Sweet and spiced, and very hard to split evenly. | Biscoff hero line |
-| The salty-sweet one people pretend they bought for the table. | Caramel + Pretzel hero line |
-| A fruit cookie for people who still want a cookie. | Raspberry hero line |
+| chocolate chip | chocolate stretching between halves, flaky salt on dome, golden edge contrast against soft middle |
+| triple chocolate | glossy milk chocolate pulling in a long string, dark chunks in cross section, deep brown crumb |
+| matcha + macadamia | green crumb top to bottom, white chocolate puddles, visible macadamia pieces, honest natural light |
+| red velvet | crimson crumb against cream cheese chip pockets, no over-saturation, neutral background |
+| biscoff | caramel-colored cookie butter swirl visible in cross section, biscoff pieces on dome |
+| caramel + pretzel | caramel pulling in a long visible string, pretzel pieces in crumb, flaky salt catching light |
+| peanut butter | fork crosshatch on dome, peanut butter chips and dark chocolate chunks both visible in cross section |
+| apple | soft apple chunks in cross section, streusel crumble intact on top, warm light |
+| almond | pale gold chewy middle, toasted sliced almonds on dome, clean stoneware backdrop |
+| raspberry | magenta berry streaks through pale crumb, whole berry pieces, white chocolate puddles, bright daylight |
 
-## implementation notes
+General rules across all photography:
+- matte surfaces only, no glossy reflective props
+- deep berry pouch present in at least one shot per flavor
+- hand-in-frame shots show the cookie being split, not held up
+- crumbs allowed, encouraged
+- no overhead-only sets, eye level for the split shots
+- daylight or daylight-balanced, no warm restaurant tungsten except biscoff and apple
 
-- Each product page should use the same common section copy unless operations change.
-- Flavor pages should not repeat full FAQ answers in the hero. Keep the hero sensory and let FAQ handle logistics.
-- Use sentence case for headings.
-- Do not use em dashes.
-- Do not use wellness claims or guilt language.
-- Do not use "artisan," "handcrafted," "premium," "ultimate," or "made with love."
-- Final ingredient lists and allergen statements must be confirmed against the actual recipe and legal label before publishing.
+---
+
+## 5. CONVERSION ELEMENTS
+
+### Sticky mobile CTA bar (bottom of viewport, appears after user scrolls past hero)
+
+```
+[ cookie thumbnail ]  chocolate chip · 6 for $X    [ add to box ]
+```
+
+- Persistent until cart drawer opens
+- Tapping thumbnail scrolls back to conversion panel
+- Tapping CTA opens quantity + pickup window mini-sheet without leaving page
+
+### Quantity helper
+
+```
+quantity
+[ - ]  [ 6 ]  [ + ]
+
+six is the sweet spot. they freeze well.
+```
+
+Helper text shifts based on quantity:
+- 1–2: "one is a sample. two is a tease."
+- 3–5: "halfway to a pouch."
+- 6: "six is the sweet spot. they freeze well."
+- 7–11: "buy six and pretend the plan was sharing."
+- 12+: "for the group chat that keeps asking what to bring."
+
+### Pickup window selector
+
+```
+pickup window
+( ) friday 4pm – 7pm     [ 8 slots left ]
+( ) saturday 10am – 1pm  [ 14 slots left ]
+```
+
+- Slot count is live, dims to "limited" under 5, shows "full" at 0
+- If a window is full, radio is disabled and shows "full, try saturday"
+- If both full, panel collapses to waitlist: "this weekend is booked. join the list for next week."
+
+### Add-ons
+
+```
+add a pouch?
+[ ] matte deep berry pouch, fits six cookies (+$4)
+    good for handing off without explaining.
+
+add a card?
+[ ] handwritten card, your message up to 80 characters (+$3)
+```
+
+### Sold-out state (per flavor)
+
+Replace CTA panel with:
+
+```
+sold out for this weekend.
+
+this one goes fast. drop your email and you'll hear 
+first when it's back on the schedule.
+
+[ email field ]
+[ tell me when it's back ]
+
+meanwhile, try:
+[ triple chocolate ]   [ chocolate chip ]
+```
+
+Hero stays the same, sample line stays the same, just the panel changes.
+
+### Cart drawer
+
+```
+your box
+
+▸ 6 × chocolate chip ............. $X
+▸ 1 × matte deep berry pouch ..... $4
+  pickup: saturday 10am – 1pm
+
+subtotal ......................... $X
+free pickup in irvine.
+
+[ check out ]
+
+still browsing?
+[ matcha + macadamia ]  [ biscoff ]  [ raspberry ]
+```
+
+---
+
+## 6. MOBILE-FIRST CONSIDERATIONS
+
+**Viewport priorities (above the fold on a 390px wide phone):**
+- Header with cart count
+- Pickup info bar
+- Top third of hero image with flavor name overlaid
+
+User should see the cookie and the name without scrolling. Sample line and CTA come on first scroll.
+
+**Tap targets:**
+- All CTAs minimum 48px tall
+- Quantity stepper buttons 44×44px minimum, spaced so thumb doesn't hit both
+- Pickup window radios are full-width tappable rows, not just the dot
+
+**Thumb zone:**
+- Primary CTA always in lower third of screen (sticky bar handles this)
+- Cart icon top right is acceptable, but cart drawer opens from bottom on mobile
+
+**Image loading:**
+- Hero image is the LCP element, preloaded, served as webp with avif fallback
+- Split-open shot lazy loads
+- Cross-sell strip images lazy load below the fold
+
+**Typography:**
+- Body 16px minimum, never smaller
+- Hero flavor name 40–48px on mobile, 72px+ on desktop
+- Sample lines 20–22px on mobile, readable without zoom
+
+**Form behavior:**
+- Quantity stepper uses numeric input mode but hides system keyboard, uses +/- only
+- Email field on sold-out state uses type="email", autofocus off (don't yank the page)
+- Pickup window selection persists in localStorage so it carries across flavor pages
+
+**Sticky behavior:**
+- Pickup info bar sticky under header on scroll
+- Mobile CTA bar appears after hero leaves viewport, hides on cart drawer open
+- No more than two sticky elements at once
+
+**Cross-page consistency:**
+- Same scroll depth across all 10 flavors
+- Common sections render server-side identically so they cache well
+- Only hero block and conversion panel state change per flavor
+
+**Performance budget:**
+- Hero image under 120kb
+- Total page weight under 800kb on first load
+- No carousel libraries, cross-sell is a horizontal scroll css snap container
+
+**Accessibility:**
+- All sample lines are real text, not baked into images
+- Alt text on split-open shots describes the cross section ("chocolate chip cookie split open, dark chocolate stretching between the two halves")
+- Color contrast on deep berry buttons checked against cream text, AA minimum
+- Pickup window radios have visible focus rings, not just color change
+
+---
+
+end of wireframe.
+
